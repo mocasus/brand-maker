@@ -1,6 +1,7 @@
 name: Validate prompts
 
 on:
+  workflow_dispatch:
   pull_request:
     paths:
       - 'prompts/**'
@@ -8,6 +9,8 @@ on:
     branches: [main]
     paths:
       - 'prompts/**'
+      - 'scripts/**'
+      - '.github/workflows/validate.yml'
 
 jobs:
   validate:
