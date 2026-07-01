@@ -1,0 +1,24 @@
+# .gitignore
+.DS_Store
+*.log
+node_modules/
+.env
+.env.local
+
+# Generated outputs (users generate their own)
+outputs/
+*.png
+*.jpg
+*.jpeg
+!assets/*.png
+!examples/*.png
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+Desktop.ini
