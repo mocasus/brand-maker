@@ -1,0 +1,56 @@
+name: Validate prompts
+
+on:
+  pull_request:
+    paths:
+      - 'prompts/**'
+  push:
+    branches: [main]
+    paths:
+      - 'prompts/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check prompt structure
+        run: |
+          set -e
+          FAILED=0
+          for f in $(find prompts -name "*.md" -not -name "README.md"); do
+            echo "Checking $f..."
+            # Must have "The Prompt" section
+            if ! grep -q "## The Prompt" "$f"; then
+              echo "  ❌ Missing '## The Prompt' section"
+              FAILED=1
+            fi
+            # Must have "Variables" section
+            if ! grep -q "## Variables" "$f"; then
+              echo "  ❌ Missing '## Variables' section"
+              FAILED=1
+            fi
+            # Must have a code block
+            if ! grep -q '```' "$f"; then
+              echo "  ❌ No code block found"
+              FAILED=1
+            fi
+          done
+          if [ $FAILED -eq 1 ]; then
+            echo ""
+            echo "❌ One or more prompts failed validation"
+            exit 1
+          fi
+          echo "✅ All prompts valid"
+
+      - name: Test CLI helper
+        run: |
+          chmod +x scripts/fill-prompt.sh
+          OUTPUT=$(./scripts/fill-prompt.sh prompts/kawaii-icons/robot.md --icon "#FFFFFF" --bg "#C15F3C")
+          if echo "$OUTPUT" | grep -q "#FFFFFF" && echo "$OUTPUT" | grep -q "#C15F3C"; then
+            echo "✅ CLI substitution works"
+          else
+            echo "❌ CLI failed to substitute variables"
+            exit 1
+          fi

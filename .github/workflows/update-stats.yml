@@ -1,0 +1,51 @@
+name: Update README stats
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'prompts/**'
+      - 'examples/**'
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Count prompts and examples
+        id: counts
+        run: |
+          PROMPT_COUNT=$(find prompts -name "*.md" -not -name "README.md" | wc -l)
+          EXAMPLE_COUNT=$(find examples -name "*.md" 2>/dev/null | wc -l)
+          BRAND_COUNT=$(find prompts/ai-brand-clones -name "*-style.md" 2>/dev/null | wc -l)
+          KAWAII_COUNT=$(find prompts/kawaii-icons -name "*.md" 2>/dev/null | wc -l)
+          echo "prompts=$PROMPT_COUNT" >> $GITHUB_OUTPUT
+          echo "examples=$EXAMPLE_COUNT" >> $GITHUB_OUTPUT
+          echo "brands=$BRAND_COUNT" >> $GITHUB_OUTPUT
+          echo "kawaii=$KAWAII_COUNT" >> $GITHUB_OUTPUT
+
+      - name: Update README badges
+        run: |
+          sed -i "s|prompts-[0-9]\+%2B|prompts-${{ steps.counts.outputs.prompts }}%2B|g" README.md
+          sed -i "s|badge/prompts-[0-9]\+|badge/prompts-${{ steps.counts.outputs.prompts }}|g" README.md
+          sed -i "s|badge/brands-[0-9]\+|badge/brands-${{ steps.counts.outputs.brands }}|g" README.md
+          sed -i "s|badge/kawaii-[0-9]\+|badge/kawaii-${{ steps.counts.outputs.kawaii }}|g" README.md
+          sed -i "s|badge/examples-[0-9]\+|badge/examples-${{ steps.counts.outputs.examples }}|g" README.md
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet README.md; then
+            echo "No changes to README"
+          else
+            git add README.md
+            git commit -m "chore: auto-update prompt count (${{ steps.counts.outputs.prompts }} prompts, ${{ steps.counts.outputs.brands }} brands)"
+            git push
+          fi
