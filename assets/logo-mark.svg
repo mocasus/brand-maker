@@ -1,9 +1,11 @@
 <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="512" height="512" rx="108" fill="#333C45"/>
-  <circle cx="90" cy="94" r="12" fill="#F4D35E"/>
-  <circle cx="424" cy="100" r="11" fill="#F4D35E"/>
-  <path d="M397 350 C403 374 416 387 441 392 C416 397 403 410 397 434 C391 410 378 397 353 392 C378 387 391 374 397 350Z" fill="#F4D35E"/>
-  <text x="256" y="298" text-anchor="middle" font-family="Baloo 2, Fredoka, Arial Rounded MT Bold, Arial, sans-serif" font-size="176" font-weight="900" letter-spacing="-15" fill="#F1F5FF" stroke="#151A20" stroke-width="24" stroke-linejoin="round" paint-order="stroke fill">BM</text>
-  <rect x="132" y="336" width="248" height="48" rx="24" fill="#F1F5FF"/>
-  <text x="256" y="369" text-anchor="middle" font-family="Inter, ui-sans-serif, system-ui" font-size="22" font-weight="900" letter-spacing="3" fill="#333C45">PROMPTS</text>
+  <rect width="512" height="512" fill="#FFFFFF"/>
+  <text x="256" y="300"
+        text-anchor="middle"
+        font-family="Baloo 2, Fredoka, Arial Rounded MT Bold, Arial, sans-serif"
+        font-size="220"
+        font-weight="900"
+        letter-spacing="-14"
+        fill="#000000">BM</text>
+  <circle cx="380" cy="290" r="18" fill="#000000"/>
 </svg>

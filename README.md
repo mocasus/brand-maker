@@ -1,16 +1,16 @@
 <div align="center">
 
-<img src="assets/logo.svg" alt="brand-maker fun typography logo" width="420" />
+<img src="assets/logo.svg" alt="brand-maker fun typography logo" width="480" />
 
 # brand-maker
 
 **Fun, configurable prompts for logo ideas that feel handmade — optimized for ChatGPT image generation.**
 
 <p>
-<a href="LICENSE"><img src="https://img.shields.io/github/license/mocasus/brand-maker?style=for-the-badge&color=333C45&labelColor=151A20" alt="License"/></a>
-<a href="https://github.com/mocasus/brand-maker/actions"><img src="https://img.shields.io/github/actions/workflow/status/mocasus/brand-maker/validate.yml?style=for-the-badge&label=prompt%20checks&color=F4D35E&labelColor=151A20" alt="Prompt checks"/></a>
-<a href="https://github.com/mocasus/brand-maker/stargazers"><img src="https://img.shields.io/github/stars/mocasus/brand-maker?style=for-the-badge&logo=github&color=F1F5FF&labelColor=151A20" alt="Stars"/></a>
-<a href="https://github.com/mocasus/brand-maker/commits/main"><img src="https://img.shields.io/github/last-commit/mocasus/brand-maker?style=for-the-badge&color=7C838D&labelColor=151A20" alt="Last commit"/></a>
+<a href="LICENSE"><img src="https://img.shields.io/github/license/mocasus/brand-maker?style=for-the-badge&color=000000&labelColor=111111" alt="License"/></a>
+<a href="https://github.com/mocasus/brand-maker/actions"><img src="https://img.shields.io/github/actions/workflow/status/mocasus/brand-maker/validate.yml?style=for-the-badge&label=prompt%20checks&color=22C55E&labelColor=111111" alt="Prompt checks"/></a>
+<a href="https://github.com/mocasus/brand-maker/stargazers"><img src="https://img.shields.io/github/stars/mocasus/brand-maker?style=for-the-badge&logo=github&color=FACC15&labelColor=111111" alt="Stars"/></a>
+<a href="https://github.com/mocasus/brand-maker/commits/main"><img src="https://img.shields.io/github/last-commit/mocasus/brand-maker?style=for-the-badge&color=38BDF8&labelColor=111111" alt="Last commit"/></a>
 </p>
 
 <p>
@@ -18,7 +18,7 @@
 <img src="https://img.shields.io/badge/Midjourney-000000?style=for-the-badge&logo=midjourney&logoColor=white" alt="Midjourney"/>
 <img src="https://img.shields.io/badge/DALL·E_3-412991?style=for-the-badge&logo=openai&logoColor=white" alt="DALL-E 3"/>
 <img src="https://img.shields.io/badge/Claude_Style-C15F3C?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude style"/>
-<img src="https://img.shields.io/badge/Ideogram-111827?style=for-the-badge&logoColor=white" alt="Ideogram"/>
+<img src="https://img.shields.io/badge/Ideogram-111111?style=for-the-badge&logoColor=white" alt="Ideogram"/>
 </p>
 
 <p>
@@ -36,11 +36,11 @@
 ## ✨ Features
 
 - **ChatGPT-first logo prompts** for GPT Image / DALL·E workflows.
-- **Fun typography direction** inspired by dark sticker-style wordmarks: chunky cream lettering, deep slate background, small yellow spark details.
-- **Configurable templates** using `[BRAND_NAME]`, `[SUBJECT]`, `[MAIN_COLOR]`, `[BACKGROUND_COLOR]`, and `[VIBE]`.
+- **Fun typography direction** — chunky handmade sticker wordmarks, monochrome by default, colorable via `[VIBE]`.
+- **Configurable templates** using `[BRAND_NAME]`, `[SUBJECT]`, `[MAIN_COLOR]`, `[BACKGROUND_COLOR]`, `[ACCENT_COLOR]`, and `[VIBE]`.
 - **Prompt categories** for typography logos, AI-brand-inspired marks, and kawaii flat app icons.
 - **Validation CI** that checks every prompt file has required sections.
-- **Reference-aware gallery** showing the user reference + generated logo variants.
+- **Reference-aware gallery** showing user references + generated logo variants + user submissions.
 
 ---
 
@@ -50,49 +50,99 @@
 git clone https://github.com/mocasus/brand-maker.git
 cd brand-maker
 
-./scripts/fill-prompt.sh prompts/typography/fun-wordmark.md \
-  --subject "logo prompt library" \
-  --icon "#F1F5FF" \
-  --bg "#333C45"
+# Default: print the raw prompt with placeholders — you fill them yourself.
+./scripts/fill-prompt.sh prompts/typography/fun-wordmark.md
 ```
 
-Paste the output into ChatGPT image generation, then iterate:
+The output keeps `[BRAND_NAME]`, `[MAIN_COLOR]`, etc. in place so you can paste
+into ChatGPT / Midjourney / Ideogram and customize each field manually.
 
-- `make it closer to the reference: dark square background, chunky cream typography, small yellow sparkles`
-- `make the text more readable and reduce decorations`
-- `make it more fun typography, not an icon`
-- `keep it flat vector, no 3D, no photorealism`
+If you want automated pre-fill for scripting, pass any flag(s) below — only the
+placeholders you provide get replaced:
+
+```bash
+./scripts/fill-prompt.sh prompts/typography/fun-wordmark.md \
+  --brand "n.eko" \
+  --main "#000000" \
+  --bg "#FFFFFF" \
+  --accent "#000000" \
+  --vibe "monochrome fun typography, handmade sticker, playful"
+```
+
+Follow-up commands to iterate in ChatGPT:
+
+- `make the letters more bubbly and less sharp`
+- `keep monochrome, no color, black on white only`
+- `add a small solid dot at the end of the wordmark`
+- `improve readability at small size, keep the sticker energy`
 
 ---
 
 ## 🖼 Gallery
 
+### Current Direction — Monochrome Fun Typography
+
 <table>
 <tr>
-<td align="center" width="25%">
-<img src="assets/reference/user-reference.jpg" width="180" alt="user reference"/><br>
-<b>User Reference</b><br>
-<sub>Dark rounded tile · cream fun type</sub>
+<td align="center" width="20%">
+<img src="assets/reference/ref-1.png" width="160" alt="user reference"/><br>
+<b>Reference</b><br>
+<sub>User-provided style</sub>
 </td>
-<td align="center" width="25%">
-<img src="assets/logo.svg" width="180" alt="primary logo"/><br>
-<b>V1 Primary</b><br>
-<sub>Stacked fun wordmark</sub>
+<td align="center" width="20%">
+<img src="assets/logo.svg" width="160" alt="V4 primary"/><br>
+<b>V4 Primary</b><br>
+<sub>Stacked wordmark</sub>
 </td>
-<td align="center" width="25%">
-<img src="assets/logo-v2-badge.svg" width="180" alt="badge variant"/><br>
-<b>V2 Badge</b><br>
-<sub>BM + stacked text</sub>
+<td align="center" width="20%">
+<img src="assets/logo-mark.svg" width="160" alt="V4 compact"/><br>
+<b>V4 Compact</b><br>
+<sub>BM mark</sub>
 </td>
-<td align="center" width="25%">
-<img src="assets/logo-v3-wide.svg" width="180" alt="wide variant"/><br>
-<b>V3 Wide</b><br>
-<sub>README/social banner</sub>
+<td align="center" width="20%">
+<img src="assets/logo-v2-badge.svg" width="160" alt="V4 badge"/><br>
+<b>V4 Badge</b><br>
+<sub>Alt layout</sub>
+</td>
+<td align="center" width="20%">
+<img src="assets/logo-v3-wide.svg" width="160" alt="V4 wide"/><br>
+<b>V4 Wide</b><br>
+<sub>Social banner</sub>
 </td>
 </tr>
 </table>
 
-> Full notes and contribution template: [`examples/gallery.md`](examples/gallery.md)
+### Legacy Directions (previous experiments)
+
+<table>
+<tr>
+<td align="center" width="33%">
+<img src="assets/logo-v1-brush.png" width="140" alt="paint brush kawaii"/><br>
+<b>V1 Paint Brush</b><br>
+<sub>Kawaii design tool</sub>
+</td>
+<td align="center" width="33%">
+<img src="assets/logo-v2-sparkle.png" width="140" alt="sparkle palette"/><br>
+<b>V2 Sparkle</b><br>
+<sub>Palette + AI generation</sub>
+</td>
+<td align="center" width="33%">
+<img src="assets/logo-v3-monogram.png" width="140" alt="monogram M"/><br>
+<b>V3 Monogram</b><br>
+<sub>Clean brand-mark</sub>
+</td>
+</tr>
+</table>
+
+### Example — `n.eko` (Test Submission)
+
+<div align="center">
+<img src="assets/examples/neko.svg" width="360" alt="n.eko test output"/>
+</div>
+
+Generated using `prompts/typography/fun-wordmark.md` with `--brand "n.eko"` — full config in [`examples/gallery.md`](examples/gallery.md).
+
+> Full notes, palette breakdown, and contribution template: [`examples/gallery.md`](examples/gallery.md)
 
 ---
 
@@ -100,7 +150,7 @@ Paste the output into ChatGPT image generation, then iterate:
 
 ### Fun Typography
 
-- **[Fun Wordmark](prompts/typography/fun-wordmark.md)** — chunky rounded typography, sticker-like, closest to the current logo direction.
+- **[Fun Wordmark](prompts/typography/fun-wordmark.md)** — chunky rounded typography, sticker-like, monochrome by default. **Current logo direction.**
 - **[Badge Wordmark](prompts/typography/badge-wordmark.md)** — compact badge / avatar version.
 
 ### AI Brand Style Clones
@@ -123,13 +173,12 @@ Paste the output into ChatGPT image generation, then iterate:
 
 ## 🧩 Logo System
 
-Current direction is based on the reference you provided:
+Current direction — **monochrome fun typography** based on user reference:
 
-- Deep slate rounded square background: `#333C45` / `#151A20`.
-- Off-white chunky typography: `#F1F5FF`.
-- Fun yellow spark accents: `#F4D35E`.
-- Thick dark lettering shadow/stroke for sticker-like depth without 3D.
-- Typography-first: the wordmark is the logo, not a random abstract AI mark.
+- Pure white background: `#FFFFFF`.
+- Pure black chunky typography: `#000000`.
+- Same-tone tiny decorations (solid dot, asterisk).
+- No rounded tile background, no color accents — typography is the whole logo.
 
 Use cases:
 
@@ -139,7 +188,8 @@ Use cases:
 | `assets/logo-mark.svg` | Compact avatar / square icon |
 | `assets/logo-v2-badge.svg` | Gallery alternate badge |
 | `assets/logo-v3-wide.svg` | Social banner / wide header |
-| `assets/reference/user-reference.jpg` | Original style reference |
+| `assets/reference/ref-1.png` | User style reference |
+| `assets/examples/neko.svg` | Test output for `n.eko` |
 
 ---
 
@@ -147,12 +197,12 @@ Use cases:
 
 | Placeholder | Meaning | Example |
 |---|---|---|
-| `[BRAND_NAME]` | Exact rendered text | `brand-maker`, `Moyzell`, `OpenFile` |
+| `[BRAND_NAME]` | Exact rendered text | `brand-maker`, `n.eko`, `Moyzell` |
 | `[SUBJECT]` | Concept or mascot | `logo prompt library`, `fun wordmark` |
-| `[MAIN_COLOR]` / `[ICON_COLOR]` | Main foreground | `#F1F5FF`, `#FFFFFF` |
-| `[BACKGROUND_COLOR]` | Canvas/background | `#333C45`, `#C15F3C` |
-| `[ACCENT_COLOR]` | Decoration/accent | `#F4D35E`, `#38BDF8` |
-| `[VIBE]` | Visual tone | `dark fun typography`, `premium playful` |
+| `[MAIN_COLOR]` / `[ICON_COLOR]` | Main foreground | `#000000`, `#FFFFFF` |
+| `[BACKGROUND_COLOR]` | Canvas/background | `#FFFFFF`, `#C15F3C` |
+| `[ACCENT_COLOR]` | Decoration/accent | `#000000`, `#F4D35E` |
+| `[VIBE]` | Visual tone | `monochrome fun typography`, `dark sticker`, `premium playful` |
 
 ---
 
@@ -162,8 +212,8 @@ Use cases:
 |---|---|---|
 | **ChatGPT / GPT Image** | Primary workflow | Best for edits and structured prompt following. |
 | **DALL·E 3** | Clean concept drafts | Good for icon concepts, may need text correction. |
-| **Ideogram** | Exact typography | Best if the wordmark spelling must be perfect. |
-| **Midjourney** | Visual exploration | Add `--style raw --ar 1:1` for controlled outputs. |
+| **Ideogram** | Exact typography | Best if the wordmark spelling must be perfect. Set style to Logo/Typography, color mode B&W. |
+| **Midjourney** | Visual exploration | Add `--style raw --ar 3:1 --no color` for monochrome direction. |
 | **Recraft** | Vector polish | Strong for flat logo refinement. |
 
 ---
@@ -172,10 +222,10 @@ Use cases:
 
 ```text
 brand-maker/
-├── assets/                     # Logo system + references
+├── assets/                     # Logo system + references + examples
 ├── examples/                   # Generation logs and gallery
 ├── prompts/
-│   ├── typography/             # Fun wordmark prompts
+│   ├── typography/             # Fun wordmark prompts (current direction)
 │   ├── ai-brand-clones/        # Claude, ChatGPT, Gemini, etc.
 │   └── kawaii-icons/           # Blob/robot/ghost templates
 ├── scripts/fill-prompt.sh      # Variable substitution helper
@@ -194,6 +244,6 @@ This repo is not affiliated with Anthropic, OpenAI, Google, xAI, Microsoft, Perp
 
 Built by [@mocasus](https://github.com/mocasus) · Contact: [Telegram @rubuskap](https://t.me/rubuskap)
 
-<sub>v1.1.1 · 2026 · MIT</sub>
+<sub>v1.2.0 · 2026 · MIT</sub>
 
 </div>

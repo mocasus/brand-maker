@@ -1,47 +1,46 @@
 # Fun Typography Wordmark Prompt
 
-**Style:** bubbly handmade typography, sticker-like logo, colorful and readable.
+**Style:** monochrome chunky handmade wordmark, sticker-style, black on white.
 **Best for:** brand names, GitHub repo logos, playful startup marks, product headers.
 **Primary generator:** ChatGPT / GPT Image. Use Ideogram if exact text spelling matters most.
 
 ## The Prompt
 
 ```text
-Create a fun typography logo for [BRAND_NAME], inspired by a dark rounded-square sticker logo with chunky off-white lettering and small yellow sparkle accents.
+Create a fun typography logo for [BRAND_NAME].
 
 GOAL
 - The logo must feel handmade, playful, friendly, and professional enough for a software/product brand.
-- It should look like a polished sticker-style wordmark, not a generic AI icon.
+- It should look like a monochrome sticker-style wordmark, not a generic AI icon.
 - The exact text must be readable: [BRAND_NAME].
-- Prioritize typography first: the letters are the main logo.
+- Prioritize typography first: the letters are the main logo, not an icon.
 
 TYPOGRAPHY
 - Use chunky rounded bubble lettering with a hand-lettered feel.
 - Letters should have soft inflated shapes, playful rhythm, and slight baseline variation.
 - Keep the word easy to read at small sizes.
-- Use a thick dark outer stroke around the letters and a thin white inner stroke/highlight.
+- Optional: thick uniform stroke around the letters for extra sticker energy.
 - The typography should feel fun and custom, not a standard font typed out.
+- Prefer stacked layout for long names, horizontal for short names (≤5 characters).
 
 COMPOSITION
-- Horizontal wordmark layout.
-- Centered on a soft rounded rectangle or transparent clean canvas.
-- Add small playful decorations around the wordmark: sparkles, dots, tiny stars, or color swatches.
+- Clean layout on a plain background (no rounded tile unless VIBE says otherwise).
+- Centered wordmark.
+- Add 1-3 tiny decorations near the wordmark: solid dot, small circle, tiny star, or asterisk.
 - Decorations must support the text, not distract from it.
 - Keep balanced spacing and a clean silhouette.
 
 COLOR
-- Main letter fill: [MAIN_COLOR], preferably off-white / cream for the reference look.
-- Background: [BACKGROUND_COLOR], preferably deep slate / charcoal for the reference look.
-- Accent decorations: [ACCENT_COLOR], preferably warm yellow for sparkle dots.
-- Outer stroke: near-black #151A20.
-- Optional shadow: hard offset dark shadow, sticker-like, not blurred.
-- Use 2-3 controlled colors max.
+- Main letter fill: [MAIN_COLOR], preferably pure black #000000.
+- Background: [BACKGROUND_COLOR], preferably pure white #FFFFFF.
+- Accent decorations: [ACCENT_COLOR], same tone as the letters.
+- Use 2 colors max (main + background). Monochrome is the default direction.
 
 VIBE
 - [VIBE]
 - Fun like a creative design tool.
 - Clean like a modern SaaS brand.
-- Friendly like a sticker pack, but not childish.
+- Friendly like a handmade sticker, but not childish.
 
 OUTPUT STYLE
 - Vector-style logo illustration.
@@ -49,18 +48,18 @@ OUTPUT STYLE
 - Looks good as a GitHub README banner and as a social preview.
 
 NEGATIVE PROMPT
-no realistic photo, no 3D render, no metallic effect, no fake mockup, no tiny unreadable text, no extra words, no misspelled brand name, no watermark, no signature, no complex background scene, no mascot covering the word, no chaotic decorations, no thin delicate serif font, no corporate boring sans-serif, no random gradients everywhere
+no realistic photo, no 3D render, no metallic effect, no fake mockup, no tiny unreadable text, no extra words, no misspelled brand name, no watermark, no signature, no complex background scene, no mascot covering the word, no chaotic decorations, no thin delicate serif font, no corporate boring sans-serif, no random gradients, no rainbow candy colors unless VIBE explicitly requests them
 ```
 
 ## Variables
 
 | Placeholder | Description | Example |
 |---|---|---|
-| `[BRAND_NAME]` | Exact logo text | `brand-maker` |
-| `[MAIN_COLOR]` | Main fill color | `#FF6B6B` |
-| `[ACCENT_COLOR]` | Accent / secondary fill | `#8B5CF6` |
-| `[BACKGROUND_COLOR]` | Canvas color | `#FFF7ED` |
-| `[VIBE]` | Tone direction | `premium playful, creative, optimistic` |
+| `[BRAND_NAME]` | Exact logo text | `brand-maker`, `n.eko` |
+| `[MAIN_COLOR]` | Main fill color | `#000000` |
+| `[ACCENT_COLOR]` | Accent / secondary fill | `#000000` |
+| `[BACKGROUND_COLOR]` | Canvas color | `#FFFFFF` |
+| `[VIBE]` | Tone direction | `monochrome fun typography, handmade sticker, playful` |
 
 ## Recommended Settings
 
@@ -68,24 +67,24 @@ no realistic photo, no 3D render, no metallic effect, no fake mockup, no tiny un
 Use the prompt as-is. If text spelling is wrong, reply:
 
 ```text
-Keep the same design, but fix the wordmark spelling exactly to: [BRAND_NAME]. Make the text more readable and reduce decorations.
+Keep the same design, but fix the wordmark spelling exactly to: [BRAND_NAME]. Make the text more readable.
 ```
 
 ### Ideogram
-Use this prompt when exact typography matters. Set style to **Logo** or **Typography**.
+Use this prompt when exact typography matters. Set style to **Logo** or **Typography**. Set color mode to **Black & White**.
 
 ### Midjourney
 Append:
 
 ```text
---style raw --ar 3:1 --stylize 120 --chaos 4
+--style raw --ar 3:1 --stylize 100 --chaos 4 --no color
 ```
 
 ## Follow-up Commands
 
 - `make the letters more bubbly and less sharp`
-- `make it cleaner and more premium, reduce decorations by 40%`
+- `make it cleaner, remove all decorations except one small dot`
 - `keep the same typography but improve readability at small size`
-- `make the black outline thicker and the white inner stroke cleaner`
-- `make the palette warmer and more Claude-like`
+- `keep monochrome, no color, black on white only`
 - `convert this into a transparent PNG logo`
+- `add a small solid dot at the end of the wordmark for character`
