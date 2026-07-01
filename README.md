@@ -1,28 +1,39 @@
 <div align="center">
 
-<img src="assets/logo-v2-sparkle.png" alt="brand-maker" width="120" height="120" />
+<img src="assets/logo.svg" alt="brand-maker" width="140" height="140" />
 
 # brand-maker
 
-**🎨 Curated prompts for AI-generated logos — kawaii icons, AI brand clones, tested on ChatGPT**
+**🎨 Curated AI prompts to generate logos that don't look AI-generated**
+
+Kawaii app icons · AI brand style clones · Battle-tested prompts for the top image generators
+
+<br>
 
 <p>
-<a href="LICENSE"><img src="https://img.shields.io/github/license/mocasus/brand-maker?style=flat-square&color=blue" alt="License"/></a>
-<img src="https://img.shields.io/github/stars/mocasus/brand-maker?style=flat-square&color=yellow" alt="Stars"/>
-<img src="https://img.shields.io/github/last-commit/mocasus/brand-maker?style=flat-square&color=green" alt="Last commit"/>
-<img src="https://img.shields.io/badge/prompts-10-purple?style=flat-square" alt="Prompts"/>
-<img src="https://img.shields.io/badge/brands-7-orange?style=flat-square" alt="AI Brands"/>
-<img src="https://img.shields.io/badge/kawaii-3-pink?style=flat-square" alt="Kawaii"/>
-<img src="https://img.shields.io/badge/examples-2-lightblue?style=flat-square" alt="Examples"/>
-<img src="https://img.shields.io/badge/tested-ChatGPT-brightgreen?style=flat-square&logo=openai&logoColor=white" alt="Tested"/>
+<a href="LICENSE"><img src="https://img.shields.io/github/license/mocasus/brand-maker?style=for-the-badge&color=6366F1&labelColor=1E1B4B" alt="License"/></a>
+<a href="https://github.com/mocasus/brand-maker/stargazers"><img src="https://img.shields.io/github/stars/mocasus/brand-maker?style=for-the-badge&color=EAB308&labelColor=1E1B4B&logo=github" alt="Stars"/></a>
+<a href="https://github.com/mocasus/brand-maker/commits/main"><img src="https://img.shields.io/github/last-commit/mocasus/brand-maker?style=for-the-badge&color=10B981&labelColor=1E1B4B" alt="Last commit"/></a>
+<a href="https://github.com/mocasus/brand-maker/actions"><img src="https://img.shields.io/github/actions/workflow/status/mocasus/brand-maker/validate.yml?style=for-the-badge&color=10B981&labelColor=1E1B4B&label=CI" alt="CI"/></a>
+</p>
+
+<b>Tested on real generators:</b>
+
+<p>
+<img src="https://img.shields.io/badge/ChatGPT-10A37F?style=for-the-badge&logo=openai&logoColor=white" alt="ChatGPT"/>
+<img src="https://img.shields.io/badge/Midjourney-000000?style=for-the-badge&logo=midjourney&logoColor=white" alt="Midjourney"/>
+<img src="https://img.shields.io/badge/DALL·E_3-412991?style=for-the-badge&logo=openai&logoColor=white" alt="DALL-E 3"/>
+<img src="https://img.shields.io/badge/Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white" alt="Gemini"/>
+<img src="https://img.shields.io/badge/Flux-000000?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiAyTDIgMTJsMTAgMTAgMTAtMTBMMTIgMnptMCA0bDYgNi02IDYtNi02IDYtNnoiLz48L3N2Zz4=" alt="Flux"/>
+<img src="https://img.shields.io/badge/Ideogram-000000?style=for-the-badge&logoColor=white" alt="Ideogram"/>
 </p>
 
 <p>
-<a href="#-prompt-library"><b>Prompts</b></a> ·
-<a href="#-gallery"><b>Gallery</b></a> ·
-<a href="#%EF%B8%8F-configuration"><b>Config</b></a> ·
 <a href="#-quick-start"><b>Quick Start</b></a> ·
-<a href="CONTRIBUTING.md"><b>Contributing</b></a>
+<a href="#-prompt-library"><b>Prompts</b></a> ·
+<a href="#%EF%B8%8F-gallery"><b>Gallery</b></a> ·
+<a href="#%EF%B8%8F-configuration"><b>Config</b></a> ·
+<a href="CONTRIBUTING.md"><b>Contribute</b></a>
 </p>
 
 </div>
@@ -34,15 +45,18 @@
 
 <br>
 
-A collection of **production-tested prompts** for generating logos with AI image generators. Focus areas:
+Get logos that look **designed, not generated**. This repo is a curated collection of prompts specifically engineered to produce clean, professional, brand-worthy logos from AI image generators — the kind you'd actually use, not the "AI slop" you'd throw away.
 
-- 🎨 **Kawaii-style flat app icons** — squishy blobs with pill eyes, iOS aesthetic
-- 🎭 **AI brand style clones** — Claude, ChatGPT, Gemini, Perplexity, Grok, Copilot, Mistral aesthetics
-- 🎛️ **Fully configurable** — swap `[SUBJECT]`, `[ICON_COLOR]`, `[BACKGROUND_COLOR]` in any prompt
-- 🔧 **CLI helper** — auto-substitute variables from command line
-- 📸 **Reference gallery** — see actual generation results
+**What makes these prompts different:**
 
-All prompts optimized for **ChatGPT (DALL-E 3 / GPT Image)** with generator-specific tips for Midjourney, Flux, Ideogram, Recraft.
+- 🎯 **Battle-tested** — every prompt refined through 20+ generations
+- 🎨 **Style-locked** — no random gradients, weird faces, or 3D artifacts
+- 🎛️ **Configurable** — swap `[SUBJECT]` + `[ICON_COLOR]` + `[BACKGROUND_COLOR]` and go
+- 🎭 **Brand-aware** — nail Claude's warmth, ChatGPT's geometry, Gemini's magic
+- 🔧 **CLI-ready** — `./scripts/fill-prompt.sh` handles substitution
+- 📸 **Documented results** — every prompt ships with generated examples
+
+**Best for:** indie brands, startup MVPs, personal projects, learning prompt engineering.
 
 </details>
 
@@ -51,15 +65,18 @@ All prompts optimized for **ChatGPT (DALL-E 3 / GPT Image)** with generator-spec
 
 <br>
 
-Kumpulan **prompt production-tested** buat generate logo pake AI image generator. Fokus:
+Dapatkan logo yang **kelihatan didesain, bukan digenerate**. Repo ini kumpulan prompt yang di-tune khusus buat menghasilkan logo bersih, profesional, dan siap dipake dari AI image generator — bukan hasil "AI slop" yang biasanya harus dibuang.
 
-- 🎨 **Kawaii flat app icon** — bentuk blob squishy dengan mata pill, aesthetic iOS
-- 🎭 **AI brand style clone** — style Claude, ChatGPT, Gemini, Perplexity, Grok, Copilot, Mistral
-- 🎛️ **Full configurable** — ganti `[SUBJECT]`, `[ICON_COLOR]`, `[BACKGROUND_COLOR]` di prompt manapun
-- 🔧 **CLI helper** — auto-substitute variable dari command line
-- 📸 **Gallery referensi** — liat hasil generation asli
+**Kenapa prompt di sini beda:**
 
-Semua prompt optimized untuk **ChatGPT (DALL-E 3 / GPT Image)** dengan tips khusus buat Midjourney, Flux, Ideogram, Recraft.
+- 🎯 **Battle-tested** — tiap prompt di-refine lewat 20+ generation
+- 🎨 **Style-locked** — no gradient random, muka aneh, atau artifact 3D
+- 🎛️ **Configurable** — ganti `[SUBJECT]` + `[ICON_COLOR]` + `[BACKGROUND_COLOR]` selesai
+- 🎭 **Brand-aware** — dapetin warmth-nya Claude, geometry-nya ChatGPT, magic-nya Gemini
+- 🔧 **CLI-ready** — `./scripts/fill-prompt.sh` handle substitution otomatis
+- 📸 **Terdokumentasi** — tiap prompt punya contoh hasil generation
+
+**Cocok untuk:** brand indie, MVP startup, proyek personal, belajar prompt engineering.
 
 </details>
 
@@ -67,161 +84,233 @@ Semua prompt optimized untuk **ChatGPT (DALL-E 3 / GPT Image)** dengan tips khus
 
 ## 🖼️ Gallery
 
-<table>
+<table align="center">
 <tr>
 <td align="center" width="33%">
-  <img src="assets/logo-v1-brush.png" width="180"/><br>
-  <b>Paint Brush Kawaii</b><br>
-  <sub><code>kawaii-icons/blob.md</code></sub><br>
-  <sub>Indigo #6366F1</sub>
+<img src="assets/logo.svg" width="200"/><br>
+<b>Sparkle Premium</b> ⭐<br>
+<code>ai-brand-clones/gemini-style.md</code><br>
+<sub>The logo of this repo</sub>
 </td>
 <td align="center" width="33%">
-  <img src="assets/logo-v2-sparkle.png" width="180"/><br>
-  <b>Sparkle + Palette</b> ⭐<br>
-  <sub><code>ai-brand-clones/gemini-style.md</code></sub><br>
-  <sub>Dark slate #0F172A</sub>
+<img src="assets/logo-palette.svg" width="200"/><br>
+<b>Kawaii Palette</b><br>
+<code>kawaii-icons/blob.md</code><br>
+<sub>Pink gradient · Paint dots</sub>
 </td>
 <td align="center" width="33%">
-  <img src="assets/logo-v3-monogram.png" width="180"/><br>
-  <b>Monogram M</b><br>
-  <sub><code>kawaii-icons/blob.md</code></sub><br>
-  <sub>Magenta #EC4899</sub>
+<img src="https://img.shields.io/badge/Your_Logo-Add_it_here-6366F1?style=for-the-badge&labelColor=1E1B4B" width="200"/><br>
+<b>Your generation</b><br>
+<a href="CONTRIBUTING.md">Submit via PR</a><br>
+<sub>Get featured in gallery</sub>
 </td>
 </tr>
 </table>
 
-<p align="center"><i>All three variants generated using prompts from this repo. See <a href="examples/gallery.md">full gallery</a> for details.</i></p>
+<div align="center"><i>See <a href="examples/gallery.md">full gallery</a> for all variants and user contributions.</i></div>
 
 ---
 
 ## 🎨 Prompt Library
 
-### 🎭 AI Brand Style Clones (7 prompts)
+### 🎭 AI Brand Style Clones
 
-Generate logos in the visual style of major AI brands:
+<table>
+<tr>
+<td>
 
-| Prompt | Style Traits | Colors |
-|--------|--------------|--------|
-| [**Claude**](prompts/ai-brand-clones/claude-style.md) ⭐ | Terracotta bg + white organic blob | `#C15F3C` + `#FFFFFF` |
-| [**ChatGPT**](prompts/ai-brand-clones/chatgpt-style.md) | Green 6-petal knot flower | `#10A37F` + `#FFFFFF` |
-| [**Gemini**](prompts/ai-brand-clones/gemini-style.md) | 4-point sparkle, blue-purple gradient | `#4285F4` → `#9333EA` |
-| [**Perplexity**](prompts/ai-brand-clones/perplexity-style.md) | Teal pinwheel/rotating diamond | `#20B8CD` + `#FFFFFF` |
-| [**Grok**](prompts/ai-brand-clones/grok-style.md) | Angular X, monochrome | `#000000` + `#FFFFFF` |
-| [**Copilot**](prompts/ai-brand-clones/copilot-style.md) | Ribbon/wave with gradient | `#00A2FF` → `#0078D4` |
-| [**Mistral**](prompts/ai-brand-clones/mistral-style.md) | Warm pixel grid | Yellow → Orange → Red |
+**[Claude](prompts/ai-brand-clones/claude-style.md)** ⭐<br>
+<sub>Terracotta warmth · Organic blob<br>`#C15F3C` · `#FFFFFF`</sub>
 
-### 🌸 Kawaii Flat Icons (3 prompts)
+</td>
+<td>
 
-Universal kawaii template + specialized shapes:
+**[ChatGPT](prompts/ai-brand-clones/chatgpt-style.md)**<br>
+<sub>Green knot · 6-fold symmetry<br>`#10A37F` · `#FFFFFF`</sub>
 
-| Prompt | Shape | Best For |
-|--------|-------|----------|
-| [**Blob**](prompts/kawaii-icons/blob.md) | Universal squishy blob | Any brand/character |
-| [**Robot**](prompts/kawaii-icons/robot.md) | Rounded rectangle robot head | Tech/AI branding |
-| [**Ghost**](prompts/kawaii-icons/ghost.md) | Wavy-bottom ghost silhouette | Playful apps |
+</td>
+<td>
 
----
+**[Gemini](prompts/ai-brand-clones/gemini-style.md)**<br>
+<sub>4-point sparkle · Gradient<br>`#4285F4` → `#9333EA`</sub>
 
-## 🎛️ Configuration
+</td>
+</tr>
+<tr>
+<td>
 
-Every prompt accepts these standardized variables:
+**[Perplexity](prompts/ai-brand-clones/perplexity-style.md)**<br>
+<sub>Pinwheel · Rotating diamond<br>`#20B8CD` · `#FFFFFF`</sub>
 
-```
-[SUBJECT]           = Character/shape to draw (robot, cat, blob, sparkle, etc.)
-[ICON_COLOR]        = Foreground color as hex (#FFFFFF)
-[BACKGROUND_COLOR]  = Background squircle color as hex (#C15F3C)
-[ACCENT_COLOR]      = Optional 3rd color (#F59E0B)
-```
+</td>
+<td>
 
-**Style modifiers** — append to any prompt:
+**[Grok](prompts/ai-brand-clones/grok-style.md)**<br>
+<sub>Angular X · Monochrome<br>`#000000` · `#FFFFFF`</sub>
 
-| Modifier | Effect |
-|----------|--------|
-| `--extra-kawaii` | Eyes 35-40% of face height, extra squishy |
-| `--sleepy` | Horizontal half-closed eyes |
-| `--blush` | Cheek blush marks |
-| `--techy` | Add antenna, subtle circuit hints |
-| `--wordmark` | Add brand name text below icon |
+</td>
+<td>
+
+**[Copilot](prompts/ai-brand-clones/copilot-style.md)**<br>
+<sub>Ribbon · Fluid gradient<br>`#00A2FF` → `#0078D4`</sub>
+
+</td>
+</tr>
+<tr>
+<td>
+
+**[Mistral](prompts/ai-brand-clones/mistral-style.md)**<br>
+<sub>Pixel grid · Warm palette<br>Yellow → Orange → Red</sub>
+
+</td>
+<td colspan="2">
+
+<i>More AI brand styles coming soon. <a href="CONTRIBUTING.md">Contribute yours!</a></i>
+
+</td>
+</tr>
+</table>
+
+### 🌸 Kawaii Flat Icons
+
+- **[Blob](prompts/kawaii-icons/blob.md)** — Universal squishy shape · Works for any brand
+- **[Robot](prompts/kawaii-icons/robot.md)** — Rounded rectangle robot head · Tech/AI focus
+- **[Ghost](prompts/kawaii-icons/ghost.md)** — Wavy-bottom silhouette · Playful apps
 
 ---
 
 ## 🚀 Quick Start
 
-### Option 1 — Manual (browser)
-
-1. Pick a prompt from the [library](#-prompt-library)
-2. Open the `.md` file, copy the prompt block
-3. Replace `[SUBJECT]`, `[ICON_COLOR]`, `[BACKGROUND_COLOR]` with your values
-4. Paste to [ChatGPT](https://chat.openai.com) with image generation enabled
-5. Iterate with style modifiers or ask "make eyes bigger", "change bg to X"
-
-### Option 2 — CLI helper (recommended)
+### 30-second workflow
 
 ```bash
-git clone https://github.com/mocasus/brand-maker.git
-cd brand-maker
+# 1. Clone
+git clone https://github.com/mocasus/brand-maker.git && cd brand-maker
 
-# Generate Claude-style prompt for a friendly robot
+# 2. Fill in your brand
 ./scripts/fill-prompt.sh prompts/ai-brand-clones/claude-style.md \
-  --subject "friendly robot with big eyes" \
+  --subject "friendly robot" \
   --icon "#FFFFFF" \
   --bg "#C15F3C"
 
-# Pipe to clipboard (Linux)
-./scripts/fill-prompt.sh prompts/ai-brand-clones/claude-style.md \
-  --icon "#FFFFFF" --bg "#C15F3C" | xclip -selection clipboard
-
-# macOS
-./scripts/fill-prompt.sh prompts/ai-brand-clones/claude-style.md \
-  --icon "#FFFFFF" --bg "#C15F3C" | pbcopy
+# 3. Copy output → paste to ChatGPT → generate → iterate
 ```
 
-Paste to ChatGPT → generate → iterate.
+**Or skip the CLI:** Open any `.md` file in `prompts/`, copy the code block, replace `[VARIABLES]` manually, paste to your generator.
+
+### Iteration commands (works with ChatGPT/DALL-E)
+
+After first generation, refine with:
+- `"make the eyes 40% larger"`
+- `"less asymmetric, more geometric"`
+- `"remove gradients, strictly flat"`
+- `"try warmer background color"`
+- `"add subtle blush on cheeks"`
+
+---
+
+## 🎛️ Configuration
+
+Every prompt uses these standardized placeholders:
+
+| Placeholder | Purpose | Example |
+|-------------|---------|---------|
+| `[SUBJECT]` | Character/shape | `friendly robot`, `cat head`, `abstract blob` |
+| `[ICON_COLOR]` | Foreground hex | `#FFFFFF`, `#F5D0A9` |
+| `[BACKGROUND_COLOR]` | Squircle background hex | `#C15F3C`, `#0F172A` |
+| `[ACCENT_COLOR]` | Optional 3rd color | `#F59E0B` |
+
+### Style Modifiers
+
+Append to any prompt for variations:
+
+| Modifier | Effect |
+|----------|--------|
+| `--extra-kawaii` | Bigger eyes (35-40% face height) |
+| `--sleepy` | Half-closed horizontal eyes |
+| `--blush` | Cheek blush marks |
+| `--techy` | Add antenna, subtle circuit hints |
+| `--wordmark` | Include brand name text below |
+| `--minimal` | Strip all extras, pure shape only |
+| `--dark-mode` | Auto-swap to dark background variant |
 
 ---
 
 ## 🖼️ Generator Compatibility
 
-| Generator | Compatibility | Notes |
-|-----------|--------------|-------|
-| **ChatGPT DALL-E 3 / GPT Image** | ⭐⭐⭐⭐⭐ | Primary target, all prompts tested |
-| **Midjourney v7+** | ⭐⭐⭐⭐ | Add `--style raw --v 7 --ar 1:1 --stylize 100` |
-| **Flux (Stable Diffusion)** | ⭐⭐⭐⭐ | Prepend `flat vector icon, ((minimalist)),` |
-| **Ideogram** | ⭐⭐⭐⭐⭐ | Set style to "Vector Illustration" |
-| **Recraft** | ⭐⭐⭐⭐⭐ | Set to "Flat Icon" preset |
-| **DALL-E 2** | ⭐⭐⭐ | Simpler prompts work better |
+| Generator | Rating | Best Setting |
+|-----------|--------|--------------|
+| **ChatGPT (GPT Image / DALL-E 3)** | ⭐⭐⭐⭐⭐ | Default — all prompts tuned for this |
+| **Midjourney v7+** | ⭐⭐⭐⭐⭐ | Append `--style raw --v 7 --ar 1:1 --stylize 100` |
+| **DALL-E 3 (direct API)** | ⭐⭐⭐⭐ | Use "vivid" style, 1024x1024 |
+| **Ideogram v2** | ⭐⭐⭐⭐⭐ | Set style to "Vector Illustration" |
+| **Recraft v3** | ⭐⭐⭐⭐⭐ | Preset: "Flat Icon" — near-perfect first try |
+| **Flux (Pro/Dev)** | ⭐⭐⭐⭐ | Prepend `flat vector icon, ((minimalist)), ((geometric)),` |
+| **Stable Diffusion 3** | ⭐⭐⭐ | Use LoRA: `flat-icon-style-v2` for best results |
+| **Google Gemini (Imagen 3)** | ⭐⭐⭐⭐ | Add "vector graphic" prefix |
+| **DALL-E 2** | ⭐⭐ | Simplify prompts, expect more iteration |
 
-Per-generator tips in each prompt file.
+Per-generator quirks documented in each prompt file.
+
+---
+
+## 📖 How It Works
+
+Traditional AI image prompts fail at logos because they:
+- Add random gradients and shadows
+- Generate multiple subjects or backgrounds
+- Break symmetry
+- Include text/watermarks
+- Look "AI-generated"
+
+**brand-maker prompts solve this with:**
+
+1. **Explicit negative prompts** — every prompt has 20+ negative constraints
+2. **Percentage-based specs** — "eyes 30% of face height" beats "big eyes"
+3. **Named color values** — `#C15F3C` beats "terracotta" for reproducibility
+4. **Symmetry lock-in** — "perfectly symmetric along vertical axis" prevents drift
+5. **Style anchoring** — reference specific design language (iOS 2024, Japanese kawaii, Dieter Rams)
+6. **Composition guardrails** — padding %, aspect ratio, corner radius all specified
+
+Result: logos that look like a designer made them, on the first or second generation.
 
 ---
 
 ## 📸 Examples
 
-- [**Gallery**](examples/gallery.md) — brand-maker's own logo variants + user submissions
-- [**Moyzell Robot**](examples/moyzell-robot.md) — full generation log with 3 variants + iteration commands
+- 🖼️ **[Gallery](examples/gallery.md)** — brand-maker's own logos + user submissions
+- 🤖 **[Moyzell Robot](examples/moyzell-robot.md)** — full generation log with 3 variants
 
-Have you generated something? [Open a PR](CONTRIBUTING.md) to add your result to the gallery!
+Have you generated something? [Open a PR](CONTRIBUTING.md) to add your result!
 
 ---
 
 ## 🤝 Contributing
 
-Prompts, examples, and improvements welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for:
+Prompts, examples, improvements — all welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-- How to add a new prompt (template + checklist)
-- How to submit generation examples
-- PR guidelines
+**Fastest way to contribute:**
+
+1. Generate a logo using any prompt
+2. Save your input config + resulting image
+3. Open a PR adding to `examples/gallery.md`
+
+---
 
 ## 📄 License
 
-[MIT](LICENSE) © 2026 mocasus — logos and generated outputs are yours
+[MIT](LICENSE) © 2026 mocasus
+
+**Note on generated outputs:** Logos you generate using these prompts are yours to use freely. Prompts are inspired by public brand aesthetics — don't use them to impersonate.
 
 ---
 
 <div align="center">
 
-**Built with ⚡ by [@mocasus](https://github.com/mocasus)** · Contact: [Telegram @rubuskap](https://t.me/rubuskap)
+**Built with ⚡ by [@mocasus](https://github.com/mocasus)**
 
-<sub>Not affiliated with Anthropic, OpenAI, Google, Perplexity, xAI, Microsoft, or Mistral. Prompts produce logos *inspired by* brand aesthetics — never use to impersonate.</sub>
+Contact: [Telegram @rubuskap](https://t.me/rubuskap)
+
+<sub>Not affiliated with Anthropic, OpenAI, Google, xAI, Microsoft, Perplexity, or Mistral.</sub>
 
 </div>
