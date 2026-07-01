@@ -1,54 +1,70 @@
 # Gallery — Live Demo Outputs
 
-Generated using prompts from this repository. All logos below were created with **ChatGPT DALL-E 3** or **SVG hand-crafted** following the prompt specs.
+Generated using prompts from this repository, then cleaned as SVG when needed.
 
-## Featured: brand-maker Logo Options
+## Featured: brand-maker Logo System
 
-All three variants below use prompts from `prompts/kawaii-icons/blob.md` with different `[SUBJECT]` + colors:
+### Primary — Fun Typography Wordmark
 
-### Option A — Paint Brush Kawaii
-**Config:** SUBJECT=`paint brush`, ICON=`#FFFFFF`, BG=`#6366F1` (indigo)
-- Style: Kawaii tool + creative energy
-- Best for: Design tool branding
+**Prompt used:** `prompts/typography/fun-wordmark.md`
 
-![Paint Brush](../assets/logo-v1-brush.png)
+**Config:**
+- `BRAND_NAME`: `brand-maker`
+- `SUBJECT`: `AI logo prompt library`
+- `MAIN_COLOR`: `#FF6B6B`
+- `ACCENT_COLOR`: `#8B5CF6 / #38BDF8 / #22C55E`
+- `BACKGROUND_COLOR`: `#FFF7ED`
+- `VIBE`: `fun typography, sticker-like, creative SaaS, readable`
 
-### Option B — Sparkle + Palette (⭐ Selected)
-**Config:** SUBJECT=`4-point sparkle`, ICON=`#FFFFFF`, BG=`#0F172A`, ACCENTS=`#F59E0B #EC4899 #10B981 #38BDF8`
-- Style: AI generation + multi-color palette
-- Best for: brand-maker itself (self-referential)
+![brand-maker wordmark](../assets/logo.svg)
 
-![Sparkle](../assets/logo-v2-sparkle.png)
+**Why it works:** the logo is a readable wordmark first, with playful sticker details second. The black stroke + white inner stroke keeps it legible on GitHub, Telegram previews, and social cards.
 
-### Option C — Monogram "M"
-**Config:** SUBJECT=`letter M monogram`, ICON=`#FFFFFF`, BG=`#EC4899` (magenta)
-- Style: Clean brand-mark
-- Best for: When you need immediate name recognition
+### Compact Mark — BM Badge
 
-![Monogram](../assets/logo-v3-monogram.png)
+**Prompt used:** `prompts/typography/badge-wordmark.md`
 
-## Real Generations (User Contributed)
+**Config:**
+- `BRAND_NAME`: `BM`
+- `MAIN_COLOR`: `#FF4D6D`
+- `ACCENT_COLOR`: `#06B6D4`
+- `BACKGROUND_COLOR`: `#FFEDD5`
+- `VIBE`: `playful prompt-tool avatar`
 
-Have you generated a logo using these prompts? Open a PR to add your result here!
+![brand-maker mark](../assets/logo-mark.svg)
 
-### Template for adding your generation:
+## Reference
+
+The user-provided style reference is stored at:
+
+![user reference](../assets/reference/user-reference.jpg)
+
+## User Submissions
+
+Have you generated a logo using these prompts? Open a PR to add your result here.
+
+### Template
 
 ```markdown
 ### [Your Brand Name]
-**Prompt used:** `prompts/[category]/[file].md`
-**Config:**
-- SUBJECT: `...`
-- ICON_COLOR: `#XXXXXX`
-- BACKGROUND_COLOR: `#XXXXXX`
 
-**Generator:** ChatGPT DALL-E 3 / Midjourney / Ideogram / etc.
-**Iterations:** N (or "one-shot")
+**Prompt used:** `prompts/[category]/[file].md`
+
+**Config:**
+- BRAND_NAME: `...`
+- SUBJECT: `...`
+- MAIN_COLOR / ICON_COLOR: `#XXXXXX`
+- BACKGROUND_COLOR: `#XXXXXX`
+- VIBE: `...`
+
+**Generator:** ChatGPT / Midjourney / Ideogram / Recraft / etc.
+**Iterations:** N
 
 ![Your Brand](./your-brand.png)
 
-**Notes:** What worked, what you adjusted, tips for others.
+**Notes:** What worked, what you adjusted, and any generator-specific tips.
 ```
 
 ## Generation Log: Moyzell Robot
 
-See [`moyzell-robot.md`](moyzell-robot.md) for the full step-by-step generation log including 3 variants and iteration commands.
+See [`moyzell-robot.md`](moyzell-robot.md) for the previous Claude-style robot generation log.

@@ -1,41 +1,76 @@
-<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">brand-maker fun typography logo</title>
+  <desc id="desc">A playful rounded wordmark logo for brand-maker with colorful bubble lettering and spark accents.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#1E1B4B"/>
-      <stop offset="0.5" stop-color="#312E81"/>
-      <stop offset="1" stop-color="#0F172A"/>
+    <filter id="softShadow" x="-8%" y="-12%" width="116%" height="132%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="14" stdDeviation="10" flood-color="#7C2D12" flood-opacity="0.18"/>
+    </filter>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF7ED"/>
+      <stop offset="0.55" stop-color="#FFFBEB"/>
+      <stop offset="1" stop-color="#FDF2F8"/>
     </linearGradient>
-    <linearGradient id="sparkle" x1="256" y1="120" x2="256" y2="392" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#FFFFFF"/>
-      <stop offset="1" stop-color="#E0E7FF"/>
+    <linearGradient id="brandFill" x1="140" y1="70" x2="1040" y2="285" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF6B6B"/>
+      <stop offset="0.28" stop-color="#F97316"/>
+      <stop offset="0.55" stop-color="#8B5CF6"/>
+      <stop offset="0.78" stop-color="#06B6D4"/>
+      <stop offset="1" stop-color="#22C55E"/>
     </linearGradient>
-    <radialGradient id="glow" cx="256" cy="256" r="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#818CF8" stop-opacity="0.4"/>
-      <stop offset="1" stop-color="#818CF8" stop-opacity="0"/>
-    </radialGradient>
   </defs>
 
-  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
-  <circle cx="256" cy="256" r="180" fill="url(#glow)"/>
+  <rect width="1200" height="360" rx="72" fill="url(#bg)"/>
 
-  <path d="M256 120
-           C 260 200, 280 224, 360 232
-           C 340 236, 320 244, 304 260
-           C 288 276, 280 296, 276 316
-           C 272 336, 268 356, 256 392
-           C 244 356, 240 336, 236 316
-           C 232 296, 224 276, 208 260
-           C 192 244, 172 236, 152 232
-           C 232 224, 252 200, 256 120 Z"
-        fill="url(#sparkle)"/>
+  <g opacity="0.85">
+    <circle cx="94" cy="84" r="16" fill="#FDBA74"/>
+    <circle cx="1096" cy="78" r="18" fill="#C084FC"/>
+    <circle cx="1044" cy="282" r="12" fill="#67E8F9"/>
+    <circle cx="154" cy="288" r="12" fill="#86EFAC"/>
+    <path d="M111 180 L121 205 L148 211 L123 222 L118 250 L102 226 L74 230 L92 209 L80 184 L106 195 Z" fill="#FDE047"/>
+    <path d="M1054 166 L1064 193 L1092 200 L1067 214 L1068 243 L1047 223 L1019 232 L1031 205 L1014 182 L1043 185 Z" fill="#F9A8D4"/>
+  </g>
 
-  <circle cx="100" cy="100" r="10" fill="#F59E0B"/>
-  <circle cx="412" cy="100" r="10" fill="#EC4899"/>
-  <circle cx="100" cy="412" r="10" fill="#10B981"/>
-  <circle cx="412" cy="412" r="10" fill="#38BDF8"/>
+  <g filter="url(#softShadow)">
+    <text x="600" y="211"
+          text-anchor="middle"
+          font-family="Baloo 2, Nunito, Arial Rounded MT Bold, Arial, sans-serif"
+          font-size="122"
+          font-weight="900"
+          letter-spacing="-4"
+          fill="#FFFFFF"
+          stroke="#111827"
+          stroke-width="18"
+          stroke-linejoin="round"
+          paint-order="stroke fill">
+      brand-maker
+    </text>
+    <text x="600" y="211"
+          text-anchor="middle"
+          font-family="Baloo 2, Nunito, Arial Rounded MT Bold, Arial, sans-serif"
+          font-size="122"
+          font-weight="900"
+          letter-spacing="-4"
+          fill="url(#brandFill)"
+          stroke="#FFFFFF"
+          stroke-width="7"
+          stroke-linejoin="round"
+          paint-order="stroke fill">
+      brand-maker
+    </text>
+  </g>
 
-  <circle cx="140" cy="256" r="3" fill="#FFFFFF" opacity="0.6"/>
-  <circle cx="372" cy="256" r="3" fill="#FFFFFF" opacity="0.6"/>
-  <circle cx="256" cy="140" r="3" fill="#FFFFFF" opacity="0.6"/>
-  <circle cx="256" cy="372" r="3" fill="#FFFFFF" opacity="0.6"/>
+  <g>
+    <path d="M242 81 C249 113 266 130 300 136 C266 143 249 160 242 192 C235 160 218 143 184 136 C218 130 235 113 242 81 Z" fill="#FACC15" stroke="#111827" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M940 226 C946 251 960 265 986 270 C960 275 946 289 940 314 C934 289 920 275 894 270 C920 265 934 251 940 226 Z" fill="#38BDF8" stroke="#111827" stroke-width="6" stroke-linejoin="round"/>
+  </g>
+
+  <text x="600" y="276"
+        text-anchor="middle"
+        font-family="Inter, ui-sans-serif, system-ui, sans-serif"
+        font-size="28"
+        font-weight="800"
+        letter-spacing="6"
+        fill="#7C2D12">
+    PROMPTS FOR LOGOS THAT FEEL HANDMADE
+  </text>
 </svg>
