@@ -7,12 +7,13 @@
 ## The Prompt
 
 ```text
-Create a fun typography logo for [BRAND_NAME].
+Create a fun typography logo for [BRAND_NAME], inspired by a dark rounded-square sticker logo with chunky off-white lettering and small yellow sparkle accents.
 
 GOAL
 - The logo must feel handmade, playful, friendly, and professional enough for a software/product brand.
 - It should look like a polished sticker-style wordmark, not a generic AI icon.
 - The exact text must be readable: [BRAND_NAME].
+- Prioritize typography first: the letters are the main logo.
 
 TYPOGRAPHY
 - Use chunky rounded bubble lettering with a hand-lettered feel.
@@ -29,11 +30,12 @@ COMPOSITION
 - Keep balanced spacing and a clean silhouette.
 
 COLOR
-- Main letter fill: [MAIN_COLOR], with optional candy gradient using [ACCENT_COLOR].
-- Background: [BACKGROUND_COLOR].
-- Outer stroke: near-black #111827.
-- Inner stroke/highlight: white #FFFFFF.
-- Use 3-5 bright but controlled colors max.
+- Main letter fill: [MAIN_COLOR], preferably off-white / cream for the reference look.
+- Background: [BACKGROUND_COLOR], preferably deep slate / charcoal for the reference look.
+- Accent decorations: [ACCENT_COLOR], preferably warm yellow for sparkle dots.
+- Outer stroke: near-black #151A20.
+- Optional shadow: hard offset dark shadow, sticker-like, not blurred.
+- Use 2-3 controlled colors max.
 
 VIBE
 - [VIBE]
